@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -35,23 +34,53 @@ h1 {
   line-height: 1.1;
 }
 
+input, select {
+  margin: 0.5rem;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #5d5d5d;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(176, 176, 176, 0.2);
+  padding: 0.5rem;
+}
+
+select {
+  border-radius: 5px 5px 0 0;
+  border: 2px solid #5d5d5d;
+  padding: 0.5rem;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  margin-left: 2rem;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.87);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 0.5s;
 }
+
+.delete {
+  border: 2px solid darkred;
+  color: darkred;
+}
+
+.delete:hover {
+  background-color: darkred;
+}
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-color: #242424;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
 }
 
 @media (prefers-color-scheme: light) {
